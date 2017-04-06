@@ -1,0 +1,5 @@
+<form action="/page" method="post">
+    <div><label>txtQuery</label><input type="text" name="txtQuery"></input></div>
+
+    <div><input type="submit"/></div>
+</form>
