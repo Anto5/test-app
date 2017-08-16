@@ -178,9 +178,9 @@ val stringhe2 = stringa2.split("\n").distinct // split in more sentences and rem
 
    db withSession {
 		  if (lg==2){
-		  val bord = """""""
-		  val qPar = bord + params("txtQuery") + bord
-		   val q = for { c <- Airports if c.iso_country === qPar } yield (c)
+		  
+		  
+		   val q = for { c <- Airports if c.iso_country === txtQuery } yield (c)
 			 	  
 			val innerJoin = for {
   (c, s) <- q join Runways on (_.ident === _.airport_ident)

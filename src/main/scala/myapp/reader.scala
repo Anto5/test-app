@@ -23,9 +23,9 @@ object splitter {
 def stringSplt (stringa: String) : Array[String]  = {
 
 val arr = stringa.split(",")
+val arr2: Array[String]= for (x <- arr) yield{ x.filter(_ != '"')}
 
-
-return (arr)
+return (arr2)
 
 
 }
